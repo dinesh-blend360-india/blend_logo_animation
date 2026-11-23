@@ -1,0 +1,24 @@
+{
+  "name": "blend-logo-animation",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "dinesh_blend360_india",
+    "email": "dinesh.marre@blend360.com"
+  },
+  "creator": "<dinesh_blend360_india> <dinesh.marre@blend360.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "check": "tsc --noEmit",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.5",
+    "react": "18.3.1",
+    "typescript": "5.9.3",
+    "vite": "5.4.21"
+  }
+}

@@ -1,0 +1,17 @@
+// Creator: <dinesh_blend360_india> <dinesh.marre@blend360.com>
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  },
+  "include": ["react-ts/**/*.ts", "react-ts/**/*.tsx"]
+}
