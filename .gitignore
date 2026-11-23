@@ -2,3 +2,7 @@
 node_modules/
 dist/
 unnesseasary/
+.tools/
+.venv/
+__pycache__/
+*.pyc

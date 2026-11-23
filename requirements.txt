@@ -1,0 +1,2 @@
+# Creator: <dinesh_blend360_india> <dinesh.marre@blend360.com>
+streamlit>=1.56,<2

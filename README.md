@@ -55,6 +55,13 @@ show_blend_logo(height=220)
 
 The helper uses Streamlit's current st.iframe API and falls back to the older HTML component where needed. Streamlit must already be installed in your app.
 
+To run the included Streamlit demo:
+
+~~~sh
+python -m pip install -r requirements.txt
+streamlit run streamlit_demo.py
+~~~
+
 ## Run this repository
 
 Open [index.html](index.html) directly for the standalone transparent preview. To run a local preview and validate the TypeScript component after cloning:
