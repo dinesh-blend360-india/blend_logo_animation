@@ -45,7 +45,7 @@ Adjust the src path to where your app serves the file. The iframe has a transpar
 
 ## Use in a Streamlit app
 
-Copy the entire [blend_logo_streamlit](blend_logo_streamlit/README.md) folder next to your app.py. Keep its HTML file beside the Python helper:
+Copy the entire [blend_logo_streamlit](blend_logo_streamlit/README.md) folder next to your app.py. Keep its index.html beside the Python helper:
 
 ~~~python
 from blend_logo_streamlit import show_blend_logo
@@ -53,14 +53,29 @@ from blend_logo_streamlit import show_blend_logo
 show_blend_logo(height=220)
 ~~~
 
-The helper uses Streamlit's current st.iframe API and falls back to the older HTML component where needed. Streamlit must already be installed in your app.
+Call show_blend_logo only while your app is loading. The helper uses st.iframe on current Streamlit versions and falls back to the older HTML component. Your app needs Streamlit, but it does not need React or npm.
 
-To run the included Streamlit demo:
+## Run the included Streamlit demo
+
+Install Python with pip first. From the repository root, create a virtual environment and run the demo.
+
+Windows PowerShell:
+
+~~~powershell
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+.\.venv\Scripts\python.exe -m streamlit run streamlit_demo.py
+~~~
+
+macOS or Linux:
 
 ~~~sh
-python -m pip install -r requirements.txt
-streamlit run streamlit_demo.py
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python -m streamlit run streamlit_demo.py
 ~~~
+
+Open the local URL printed by Streamlit, usually http://localhost:8501. Press Ctrl+C in that terminal to stop the server. The .venv directory is ignored by Git.
 
 ## Run this repository
 
@@ -98,6 +113,8 @@ react-ts/useLoadingLogoTurn.ts   Optional TypeScript hook
 react-js/BlendLogoLoader.jsx     JavaScript React component
 react-js/useLoadingLogoTurn.js   Optional JavaScript hook
 blend_logo_streamlit/           Drop-in Streamlit helper and HTML asset
+streamlit_demo.py              Runnable Streamlit preview
+requirements.txt               Streamlit dependency for the demo
 package.json                     Local preview and validation commands
 LICENSE                          MIT license
 ~~~
